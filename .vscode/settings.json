@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 200,
+            "driver": "SQLite",
+            "name": "OList",
+            "group": "ECommerce",
+            "database": "${workspaceFolder:dojo.sql}/olist.sqlite"
+        }
+    ]
+}
