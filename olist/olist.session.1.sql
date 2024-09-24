@@ -1,9 +1,17 @@
+/* -------------------------------------------------------------------------- */
+/*                               Product Weight                               */
+/* -------------------------------------------------------------------------- */
+
 SELECT product_category_name,
     product_weight_g
 FROM products
 WHERE product_category_name IS NOT NULL
 ORDER BY product_id ASC
 LIMIT 100 OFFSET 0;
+
+/* -------------------------------------------------------------------------- */
+/*                             Category Wise Sales                            */
+/* -------------------------------------------------------------------------- */
 
 SELECT -- c.customer_unique_id,
     -- GROUP_CONCAT(prod.product_id),

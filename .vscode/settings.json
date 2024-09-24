@@ -5,7 +5,14 @@
             "driver": "SQLite",
             "name": "OList",
             "group": "ECommerce",
-            "database": "${workspaceFolder:dojo.sql}/olist.sqlite"
+            "database": "${workspaceFolder:dojo.sql}/olist/olist.sqlite"
+        },
+        {
+            "previewLimit": 200,
+            "driver": "SQLite",
+            "name": "airlines",
+            "group": "Travel",
+            "database": "${workspaceFolder:dojo.sql}/airlines/airlines.sqlite"
         }
     ]
 }
