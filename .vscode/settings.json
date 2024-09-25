@@ -3,7 +3,7 @@
         {
             "previewLimit": 200,
             "driver": "SQLite",
-            "name": "OList",
+            "name": "olist",
             "group": "ECommerce",
             "database": "${workspaceFolder:dojo.sql}/olist/olist.sqlite"
         },
@@ -13,6 +13,13 @@
             "name": "airlines",
             "group": "Travel",
             "database": "${workspaceFolder:dojo.sql}/airlines/airlines.sqlite"
+        },
+        {
+            "previewLimit": 200,
+            "driver": "SQLite",
+            "name": "chinook",
+            "group": "Business",
+            "database": "${workspaceFolder:dojo.sql}/chinook/chinook.sqlite"
         }
     ]
 }
