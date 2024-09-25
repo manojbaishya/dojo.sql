@@ -1,3 +1,13 @@
+# Airlines
+
+Check out the `./airlines` folder.
+
+[Schema Diagram PDF](./airlines/airlines.schema.dia.pdf)
+
+[Schema Description PDF](./airlines/airlines.schema.desc.pdf)
+
+---
+
 # Olist
 Ecommerce Database
 
@@ -61,8 +71,3 @@ Create features from this rich dataset or attach some external public informatio
 
 ## Acknowledgements
 Thanks to Olist for releasing this dataset.
-
-
-# Airlines
-
-Check out the `./airlines` folder.
