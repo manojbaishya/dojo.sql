@@ -1,3 +1,7 @@
+/*markdown
+**Find which customers purchased which artists and where are the customers located, year-wise. Show the bill value and the staff that attended to them.**
+*/
+
 SELECT strftime('%Y', i.InvoiceDate) AS [Year],
     c.FirstName || ' ' || c.LastName AS [Customer],
     c.City AS [City],
@@ -18,4 +22,11 @@ GROUP BY Year,
     Employee
 ORDER BY Year ASC,
     Amount DESC
-LIMIT 200 OFFSET 0;
+LIMIT 10 OFFSET 0;
+
+
+
+/*markdown
+**Longest Track by Artist**
+*/
+
