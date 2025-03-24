@@ -35,3 +35,32 @@ FROM pharmacy_sales
 ORDER BY total_profit DESC
 OFFSET 0 FETCH NEXT 3 ROWS ONLY;
 
+-- Pharmacy Analytics (Part 2)
+-- CVS Health SQL Interview Question
+
+SELECT
+  manufacturer,
+  COUNT(drug) as drug_count,
+  SUM(cogs - total_sales) AS total_loss
+FROM pharmacy_sales
+WHERE cogs > total_sales
+GROUP BY manufacturer
+ORDER BY SUM(cogs - total_sales) DESC;
+
+-- Pharmacy Analytics (Part 3)
+-- CVS Health SQL Interview Question
+
+WITH SalesData AS (
+    SELECT
+      manufacturer as manf,
+      ROUND(SUM(total_sales)  / 1000000.0) as Sales
+    FROM pharmacy_sales
+    GROUP BY manufacturer
+    )
+SELECT
+  pharmacy_sales.manufacturer,
+  FORMAT('$%s million', SalesData.Sales ) AS sale
+FROM pharmacy_sales
+INNER JOIN SalesData ON SalesData.manf = pharmacy_sales.manufacturer
+GROUP BY pharmacy_sales.manufacturer, SalesData.Sales
+ORDER BY SalesData.Sales DESC;
